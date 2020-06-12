@@ -1,7 +1,7 @@
-#[lang = "eh_personality"] extern fn eh_personality() {}
-#[lang = "eh_unwind_resume"] extern fn rust_eh_unwind_resume() {}
+use core::panic::PanicInfo;
 
-#[lang = "panic_fmt"] extern fn panic_fmt() -> ! {
+#[panic_handler]
+extern fn panic_fmt(_info: &PanicInfo) -> ! {
 	KdPrint!("panic_fmt() -> !");
 	loop{}
 }

@@ -16,8 +16,8 @@ crate-type = ["rlib"]
 
 [dependencies]
 alloc_system = { path="src/alloc" }
-core = { path= "../libcore", version="*" }
-collections = { path = "../libcollections" }
+#core = { path= "../libcore", version="*" }
+#collections = { path = "../libcollections" }
 
 [profile.release]
 opt-level = 3
@@ -26,3 +26,7 @@ rpath = false
 lto = true
 debug-assertions = false
 codegen-units = 4
+panic = "abort"
+
+[profile.dev]
+panic = "abort"

@@ -12,5 +12,5 @@ path = "alloc.rs"
 test = false
 
 [dependencies]
-core = { path= "../../../libcore" }
-alloc = { path = "../../../liballoc" }
+#core = { path= "../../../libcore" }
+#alloc = { path = "../../../liballoc" }

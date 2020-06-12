@@ -8,14 +8,6 @@
 // however, can use all of libcore.
 #![no_std]
 
-// The compiler needs to be instructed that this crate is an allocator in order
-// to realize that when this is linked in another allocator like jemalloc should
-// not be linked in
-#![feature(global_allocator)]
-#![feature(default_lib_allocator)]
-//#![allocator]
-
-
 
 mod pool;
 
