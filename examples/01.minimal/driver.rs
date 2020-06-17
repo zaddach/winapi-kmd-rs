@@ -2,8 +2,6 @@
 #![no_std]
 #![allow(bad_style)]
 
-#[macro_use] extern crate km;
-
 use core::mem;
 use km::*;
 

@@ -1,11 +1,12 @@
 [package]
-name = "rust.drv.examples.minimal"
+name = "rust_drv_examples_minimal"
 description = "Minimal Windows kernel driver sample."
 version = "0.1.0"
 authors = ["pravic <ehysta@gmail.com>"]
 readme = "../README.md"
 
 build = "../build.rs"
+edition = "2018"
 
 [lib]
 path = "driver.rs"
@@ -21,7 +22,10 @@ debug = true
 rpath = false
 lto = true
 debug-assertions = false
+panic = "abort"
+
+[profile.dev]
+panic = "abort"
 
 [dependencies]
-winapi-kmd  = { path = "../../../km", version="*" }
-core        = { path = "../../../libcore", version = "*" }
+winapi-kmd  = { path = "../../", version="*" }

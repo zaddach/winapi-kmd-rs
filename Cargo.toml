@@ -9,6 +9,7 @@ repository = "https://github.com/pravic/winapi-kmd-rs"
 documentation = "http://pravic.github.io/winapi-kmd-rs"
 readme = "README.md"
 license = "MIT"
+edition = "2015"
 
 [lib]
 name = "km"
@@ -16,8 +17,6 @@ crate-type = ["rlib"]
 
 [dependencies]
 alloc_system = { path="src/alloc" }
-#core = { path= "../libcore", version="*" }
-#collections = { path = "../libcollections" }
 
 [profile.release]
 opt-level = 3
